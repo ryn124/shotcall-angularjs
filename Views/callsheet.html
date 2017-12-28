@@ -1,0 +1,82 @@
+<div class="container input-form" id="callsheet-animate">
+
+  <div class="container">
+
+    <h3 class="text-center">
+      <strong>Photoshoot Call Sheet</strong>
+    </h3>
+    <div class="row call-top-row">
+      <div class="planner-card col-md-3">
+        <div class="row spacing">
+          <p>
+            <strong>Shoot Planner</strong>
+          </p>
+        </div>
+        <div class="row spacing">
+          <p>{{plannerName}}</p>
+        </div>
+      </div>
+      <div class="description-card col-md-9">
+        <div class="quote">
+          <blockquote>
+            <p>{{callDescription}}</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="weather-card">
+      <div class="row text-center">
+        <p>{{dateRead}}</p>
+        <strong>{{locationHeading}}</strong>
+      </div>
+      <div class="text-center row">
+        <strong>{{weatherRead}}</strong>
+        <img src="./acuIcon/{{weatherIcon}}.png" alt="">
+        <div class="row" id="mapSheet">
+        </div>
+      </div>
+    </div>
+
+    <div class="row container contacts-call-container">
+      <p class="text-center">
+        <strong>Contacts</strong>
+      </p>
+      <div class="row  contacts-card" ng-repeat="person in people">
+        <div class="row">
+          <div class="col-md-3">
+            <strong>{{person.firstName}} {{person.lastName}}</strong>
+          </div>
+          <div class="col-md-9">
+            <strong>{{person.role}}</strong>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <p>{{person.phone}}</p>
+            <p>{{person.email}}</p>
+          </div>
+          <div class="col-md-9 person-notes">
+            {{person.notes}}
+          </div>
+        </div>
+      </div>
+
+      <div class="row schedule-card">
+        <div class="scheduleCardContainer">
+          <div class="event-container input-form card" ng-repeat="schedule in events">
+            <div class="event-card">
+              <div class="row">
+                <em class="text-left event-time">{{schedule.time}}</em>
+                <strong class="text-right event-name">{{schedule.eventName}}</strong>
+              </div>
+              <div class="row event-description">{{schedule.eventDescription}}</div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

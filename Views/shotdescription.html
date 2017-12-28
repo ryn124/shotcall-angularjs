@@ -1,0 +1,29 @@
+<div class="container input-form">
+
+  <h3 class="text-center">
+    <em>Describe the Goals and/or Purpose of your shoot</em>
+  </h3>
+
+  <div class="descriptionContainer contentFade" ng-show="descriptionButtons">
+    <form ng-submit="addDescription(shotDescription); descriptionSwitch()" novalidate>
+      <div class="form-container">
+        <textarea class="form-control" rows="3" placeholder="Enter description" ng-model="shotDescription" ng-required="true"></textarea>
+      </div>
+      <input type="submit" class="btn card-button btn-warning btn-md pull-right" value="Done">
+    </form>
+  </div>
+
+  <div class="quoteContainer contentFade" ng-show="!descriptionButtons">
+    <div class="quote">
+      <blockquote>
+        <p>{{shotDescription}}</p>
+        <footer>{{plannerFirst}} {{plannerLast}}
+          <cite title="Source Title"> 'Shoot Planner'</cite>
+        </footer>
+      </blockquote>
+    </div>
+    <button class="btn card-button btn-success btn-sm pull-right" ui-sref="locations">Next</button>
+    <button class="btn btn-info btn-md pull-right" ng-click="updateDescription()">Update</button>
+  </div>
+
+</div>

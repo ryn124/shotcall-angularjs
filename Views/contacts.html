@@ -1,0 +1,77 @@
+<div class="container">
+
+  <div class="input-form">
+    <div class="row">
+      <h3 class="text-center">
+        <em>{{heading}}</em>
+      </h3>
+      <div class="formContainer">
+        <form ng-submit="addPerson()" novalidate>
+          <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="First Name" ng-model="person.firstName" ng-required="true">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="person.lastName" ng-required="true">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label>Phone#</label>
+            <input type="text" class="form-control" placeholder="Phone #" ng-model="person.phone" phone-input ng-required="true">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email" ng-model="person.email">
+
+          </div>
+
+          <div class="form-group col-md-6">
+            <label>Notes</label>
+            <textarea class="form-control" rows="3" placeholder="Enter special needs or instructions" ng-model="person.notes"></textarea>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label>Role</label>
+            <select class="form-control" ng-model="person.role" ng-required="true">
+              <option hidden value="">Please select</option>
+              <option value="Main Photographer">Main Photographer</option>
+              <option value="Extra Photographer">Extra Photographer</option>
+              <option value="Crew">Crew</option>
+              <option value="Talent/Model">Talent/Model</option>
+              <option value="Agent">Agent</option>
+              <option value="Director">Director</option>
+            </select>
+          </div>
+          <button class="btn card-button btn-success btn-sm pull-right" ui-sref="shotDescription" ng-show="addButton">Next</button>
+          <input type="submit" class="btn card-button btn-warning btn-md pull-right" ng-show="addButton" value="add">
+        </form>
+        <button class="btn btn-info btn-md pull-right" ng-click="updatePerson(person)" ng-show="!addButton">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row contact-section">
+    <div class="card col-md-2 col-sm-4" ng-repeat="person in people" ng-click="showContact(person)">
+      <div class="row person-role">{{person.role}}</div>
+      <div class="row person-name">
+        <strong>{{person.firstName}} {{person.lastName}}</strong>
+      </div>
+
+      <div ng-show="person.show">
+        <div class="row person-phone">
+          <strong>Phone: </strong>{{person.phone}}</div>
+        <div class="row person-email">
+          <strong>Email: </strong>{{person.email}}</div>
+        <div class="row person-notes">
+          <strong>Notes: </strong>{{person.notes}}</div>
+        <button class="btn card-button btn-info" ng-click="personFill(person)">Update</button>
+        <button class="btn card-button btn-danger" ng-click="deletePerson(person)">X</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

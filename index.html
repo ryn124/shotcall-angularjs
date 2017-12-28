@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shotApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shot Call</title>
+
+  <!-- Google Font - Open Sans -->
+  <link async href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+  <!-- Bootstrap CDN 3.3.7 -->
+  <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+   <!-- google f-en maps -->
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABBleRUqFda2vbGC2oDLFT7z46fCnYfow">
+   </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Angular CDN 1.6.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+
+  <!-- Angular UI Router CDN 0.4.2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+  <!-- Angular Ui Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+  <!-- angular animate -->
+  <script src="https://code.angularjs.org/1.6.6/angular-animate.min.js"></script>
+
+
+  <!-- google f-en maps -->
+  <script  src="https://maps.googleapis.com/maps/api/js?key=APIKEY">
+  </script>
+  
+
+
+</head>
+
+<body>
+
+  <div class="custom-nav">
+    <ul class="custom-nav-items text-center">
+      <li ui-sref="index">
+        <a>Shot Call</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="mainView" ui-view></div>
+  </div>
+
+  <!-- Module -->
+  <script type="text/javascript" src="./app.js"></script>
+
+
+  <!-- custom directives -->
+  <script type="text/javascript" src="./phoneDirective.js"></script>
+
+  <!-- Services -->
+  <script type="text/javascript" src="./services/contactsService.js"></script>
+  <script type="text/javascript" src="./services/shotDescriptionService.js"></script>
+  <script type="text/javascript" src="./services/locationsService.js"></script>
+  <script type="text/javascript" src="./services/scheduleService.js"></script>
+  <srcipt type="text/javascript" src="./services/locationsService.js"></script>
+  <script type="text/javascript" src="./services/callSheetService.js"></script>
+
+  <!-- Controllers -->
+  <script type="text/javascript" src="./controllers/contactsController.js"></script>
+  <script type="text/javascript" src="./controllers/shotDescriptionController.js"></script>
+  <script type="text/javascript" src="./controllers/locationsController.js"></script>
+  <script type="text/javascript" src="./controllers/scheduleController.js"></script>
+  <script type="text/javascript" src="./controllers/callSheetController.js"></script>
+
+</body>
+
+</html>

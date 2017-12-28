@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="input-form">
+    <h3 class="text-center">
+      <em>{{scheduleHeading}}</em>
+    </h3>
+    <!-- start time, title, description -->
+    <div class="schedule-form">
+      <form ng-submit="addEvent(schedule)">
+
+        <div class="row">
+          <div class="form-group col-md-2">
+            <label>Start Time: </label>
+            <input type="time" class="form-control" ng-model="schedule.time" placeholder="Time">
+          </div>
+          <div class="form-group col-md-10">
+            <label>Event: </label>
+            <input type="text" class="form-control" ng-model="schedule.eventName" placeholder="Crew Call, break, make-up, etc.">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label>Description: </label>
+            <textarea class="form-control" rows="2" ng-model="schedule.eventDescription" placeholder="Describe the event at this time"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" class="btn btn-warning card-button pull-right" ng-show="scheduleAddButton" value="add">
+        </div>
+      </form>
+      <div class="row">
+        <button class="btn btn-success card-button pull-right btn-sm" ng-show="scheduleAddButton" ui-sref="callsheet">next</button>
+        <button class="btn btn-info btn-md pull-right" ng-click="updateEvent(schedule)" ng-show="!scheduleAddButton">Update</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- schedule cards below -->
+  <div class="scheduleCardContainer">
+    <div class="event-container input-form card" ng-repeat="schedule in events">
+      <div class="event-card">
+        <div class="row">
+          <em class="text-left event-time">{{schedule.time}}</em>
+          <strong class="text-right event-name">{{schedule.eventName}}</strong>
+        </div>
+        <div class="row event-description">{{schedule.eventDescription}}</div>
+
+        <div class="row">
+          <button class="btn btn-sm card-button btn-danger pull-right">X</button>
+          <button class="btn btn-sm card-button btn-info pull-right" ng-disabled="scheduleUpdateButton" ng-click="eventFill(schedule)">Update</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

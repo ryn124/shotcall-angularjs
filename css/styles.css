@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+/*Nav*/
+.custom-nav {
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  padding-top: 36px;
+  padding-left: 30px;
+  background-image: url("../images/header.jpg");
+}
+
+.custom-nav-items a {
+  display: inline;
+  color: white;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.custom-nav-items a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+
+.custom-nav-items li {
+  display: inline;
+}
+/* container */
+.input-form {
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgba(128, 128, 128, 0.37);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 6px 6px 2px 1px rgba(51, 51, 51, 0.2)
+}
+
+.formContainer {
+  margin: 5%;
+}
+.whenContainer {
+  margin: auto 40%;
+}
+/* contact form */
+.card {
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgba(128, 128, 128, 0.37);
+  box-shadow: 3px 3px 2px 1px rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+}
+
+.person-role {
+  padding: 5px;
+  background-color: orange;
+}
+.person-name {
+  padding-left: 5px;
+  font-size: 20px;
+}
+.person-phone {
+  padding-left: 5px
+}
+.person-email {
+  padding-left: 5px
+}
+.person-notes {
+  padding: 5px;
+}
+.card-button {
+  margin: 5px;
+}
+/* schedule */
+.schedule-form {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.event-card {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.event-description {
+  padding: 5px;
+  background-color: orange;
+  border-radius: 5px;
+  color: white;
+}
+
+/* shot description */
+.addImg {
+  margin: 5px;
+}
+
+/* angular invalid input */
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+/* angular animate */
+.card.ng-enter {
+  transition: 0.5s linear all;
+  opacity:0;
+  transform: translateY(-30px)
+}
+.card.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0px)
+}
+.card.ng-leave {
+  transition: 0.5s linear all;
+  opacity :1;
+  transform: translateX(0)
+}
+.card.ng-leave-active {
+  opacity: 0;
+  transform: translateX(-30px)
+}
+
+
+#mainView.ng-enter {
+  transition: 1s linear all;
+  opacity: 0;
+}
+#mainView.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+/* google maps */
+
+#mapMain {
+  height: 400px;
+  width: 90%;
+  margin: 5%;
+  border-radius: 10px;
+  border: 1px black solid;
+  border-color: rgba(128, 128, 128, 0.37);
+  box-shadow: 3px 3px 2px 1px rgba(51, 51, 51, 0.2);
+}
+/* callsheet page */
+.planner-card{
+  height: 50px;
+}
+.description-card{
+  height: 50px;
+}
+.call-top-row{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.date-card{
+  height: 120px;
+  margin-top: 4px;
+}
+.weather-card{
+  height: 250px;
+  background: orange;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+  color: white;
+}
+.contacts-card{
+  box-shadow: 3px 3px 2px 1px rgba(255, 162, 0, 0.562);
+  border: 1px solid rgba(255, 162, 0, 0.562);
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.schedule-card{
+
+}
+.person-notes{
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  box-shadow: 3px 3px 2px 1px rgba(51, 51, 51, 0.2);
+}
+.contacts-call-container{
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+#mapSheet {
+  height: 200px;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgba(128, 128, 128, 0.37);
+  box-shadow: 3px 3px 2px 1px rgba(51, 51, 51, 0.2);
+}
