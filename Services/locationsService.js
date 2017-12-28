@@ -9,8 +9,7 @@ app.service("locationsService", function ($state, $http) {
 
   var _gLat = 33.80222320000001;
   var _gLng = -117.9699812;
-  // var _gLat = {};
-  // var _gLng = {};
+
   this.gLat = function (){
     return _gLat;
   }
@@ -31,7 +30,7 @@ app.service("locationsService", function ($state, $http) {
     return $http.get("https://maps.googleapis.com/maps/api/geocode/json?", {
       params: {
         address: _location,
-        key: 'API KEY'
+        key: 'APIKEY'
       }
     });
   }

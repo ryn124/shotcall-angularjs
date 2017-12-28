@@ -16,19 +16,11 @@ app.service("contactsService", function($state) {
   
   };
 
-  // seed add
-  // _people.push(new Person(_personId++, "first", "last", "000", "email", "notessssssssssssssssss", "Main Photographer"));
-  // _people.push(new Person(_personId++, "first", "last", "000", "email", "notessssssssssssssssss", "Main Photographer"));
-  // _people.push(new Person(_personId++, "first", "last", "000", "email", "notessssssssssssssssss", "Main Photographer"));
-  // _people.push(new Person(_personId++, "first", "last", "000", "email", "notessssssssssssssssss", "Main Photographer"));
-  // _people.push(new Person(_personId++, "first", "last", "000", "email", "notessssssssssssssssss", "Main Photographer"))
-
   // add a person
   this.addPerson = function(person) {
     console.log(person);
     _people.push(new Person(_personId++, person.firstName, person.lastName, person.phone, person.email, person.notes, person.role))
     console.log(_people)
-
   };
 
  

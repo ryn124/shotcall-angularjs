@@ -18,18 +18,7 @@ app.controller("locationsController", function ($scope, $stateParams, $state, lo
     console.log("initMap end")
   }
 
-  // google map check
-  // locationsService.gMap()
-  //   .then(function (response) {
-  //     console.log(response);
-  //     console.log(response.data.results[0].formatted_address)
-  //     console.log(response.data.results[0].geometry.location)
-  //   }).catch(function (error) {
-  //     console.log(error)
-  //   })
 
-
-  // geocode call
   $scope.geoLat = locationsService.gLat();
   $scope.geoLng = locationsService.gLng();
 

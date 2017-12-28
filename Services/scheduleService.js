@@ -16,12 +16,7 @@ app.service("scheduleService", function($state){
     return _events;
   }
 
-  // seed
-  // _events.push(new Event(_eventId++, 100, "blah", "description blah"))
-  // _events.push(new Event(_eventId++, 100, "blah", "description blah"))
-  // _events.push(new Event(_eventId++, 100, "blah", "description blah"))
-  // _events.push(new Event(_eventId++, 100, "blah", "description blah"))
-  // console.log(_events)
+
   this.addEvent = function(schedule){
     _events.push(new Event(_eventId++, schedule.time, schedule.eventName, schedule.eventDescription));
     console.log(_events)
